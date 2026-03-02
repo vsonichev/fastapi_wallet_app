@@ -1,0 +1,40 @@
+[project]
+name = "wallet-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "alembic>=1.18.4",
+    "asyncpg>=0.31.0",
+    "fastapi>=0.133.0",
+    "pydantic-settings>=2.13.1",
+    "sqlalchemy>=2.0.47",
+    "uvicorn>=0.41.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.0.2",
+    "pytest-asyncio>=1.3.0",
+    "ruff>=0.15.4",
+]
+
+[tool.ruff]
+# Версия Python
+target-version = "py313"
+line-length = 79
+
+[tool.ruff.lint]
+# Список правил: 
+# E, W - ошибки и предупреждения PEP8
+# F - логические ошибки (Pyflakes)
+# I - сортировка импортов (isort)
+# B - поиск распространенных багов
+select = ["E", "W", "F", "I", "B"]
+ignore = ["B008"]
+
+[tool.ruff.format]
+# Использовать двойные кавычки
+quote-style = "double"
