@@ -32,9 +32,11 @@
 
 Тесты покрывают основные операции и проверку конкурентности. Запустить их можно внутри контейнера:
     ```bash
+    
     docker exec -it wallet_app-web-1 uv run pytest
+    
 
 ## Эндпоинты
-POST /api/v1/wallets — Создать новый кошелек (добавлен для удобства тестирования).
-GET /api/v1/wallets/{WALLET_UUID} — Получить баланс кошелька.
-POST /api/v1/wallets/{WALLET_UUID}/operation — Выполнить операцию (DEPOSIT/WITHDRAW).
+1. POST /api/v1/wallets — Создать новый кошелек (добавлен для удобства тестирования).
+2. GET /api/v1/wallets/{WALLET_UUID} — Получить баланс кошелька.
+3. POST /api/v1/wallets/{WALLET_UUID}/operation — Выполнить операцию (DEPOSIT/WITHDRAW).
