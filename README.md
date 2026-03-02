@@ -34,8 +34,8 @@
 
     ```    
     docker exec -it wallet_app-web-1 uv run pytest
-    ```
-    
+
+
 ## Эндпоинты
 1. POST /api/v1/wallets — Создать новый кошелек (добавлен для удобства тестирования).
 2. GET /api/v1/wallets/{WALLET_UUID} — Получить баланс кошелька.
